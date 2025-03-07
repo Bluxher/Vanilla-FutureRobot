@@ -1,0 +1,116 @@
+<html>
+<head>
+    <title>Tomy's site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #224FBC;
+            color: white;
+            font-family: 'Fira Code', monospace;
+            font-weight: 400;
+            font-size: 1.2em;
+        }
+        .ascii-art {
+            white-space: pre;
+            font-weight: bold;
+        }
+        .a-underline {
+            text-decoration: underline;
+            color: inherit;
+        }
+        .a-regular {
+            text-decoration: none;
+            color: inherit;
+        }
+        .right-align {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="asciiArt1" class="ascii-art"></div>
+    <div id="asciiArt2" class="ascii-art"></div>
+    <h3>~.Welcome to our site! We are still on construction</h3>
+    ~ ~
+    <a class="a-underline" 
+        href="#" 
+        target="_blank">----</a>
+    <br>
+    ~ ~ 
+    <a class="a-underline" 
+        href="#" 
+        target="_blank">----</a>
+    <br>
+    ~ ~ 
+    <a class="a-underline" 
+        href="#" 
+        target="_blank">----</a>
+    <br>
+    ~ ~ 
+    <a class="a-underline" 
+        href="#"
+        target="_blank">----</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="right-align">
+        <a class="a-regular" 
+            href="#"
+            target="_blank">
+            ----</a>
+        -
+        <a class="a-regular" 
+            href="#">
+            ----</a>
+        </div>
+
+    <!-- <h1>TOMY TOMAS</h1> -->
+</body>
+<script>
+    window.addEventListener('resize', updateAsciiArt);
+    updateAsciiArt();
+
+    function updateAsciiArt() {
+        const asciiArtDiv1 = document.getElementById('asciiArt1');
+        const asciiArtDiv2 = document.getElementById('asciiArt2');
+        const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+        if (isPortrait) {
+            asciiArtDiv1.textContent = `  
+ _______  __   __  _______  __   __  ______    _______ 
+|       ||  | |  ||       ||  | |  ||    _ |  |       |
+|    ___||  | |  ||_     _||  | |  ||   | ||  |    ___|
+|   |___ |  |_|  |  |   |  |  |_|  ||   |_||_ |   |___ 
+|    ___||       |  |   |  |       ||    __  ||    ___|
+|   |    |       |  |   |  |       ||   |  | ||   |___ 
+|___|    |_______|  |___|  |_______||___|  |_||_______| 
+
+            `;
+   
+            asciiArtDiv2.textContent = `   
+ ______    _______  _______  _______  _______ 
+|    _ |  |       ||  _    ||       ||       |
+|   | ||  |   _   || |_|   ||   _   ||_     _|
+|   |_||_ |  | |  ||       ||  | |  |  |   |  
+|    __  ||  |_|  ||  _   | |  |_|  |  |   |  
+|   |  | ||       || |_|   ||       |  |   |  
+|___|  |_||_______||_______||_______|  |___|  
+            `;
+        } else {
+            asciiArtDiv1.textContent = `
+     _______  __   __  _______  __   __  ______    _______    ______    _______  _______  _______  _______ 
+    |       ||  | |  ||       ||  | |  ||    _ |  |       |  |    _ |  |       ||  _    ||       ||       |
+    |    ___||  | |  ||_     _||  | |  ||   | ||  |    ___|  |   | ||  |   _   || |_|   ||   _   ||_     _|
+    |   |___ |  |_|  |  |   |  |  |_|  ||   |_||_ |   |___   |   |_||_ |  | |  ||       ||  | |  |  |   |  
+    |    ___||       |  |   |  |       ||    __  ||    ___|  |    __  ||  |_|  ||  _   | |  |_|  |  |   |  
+    |   |    |       |  |   |  |       ||   |  | ||   |___   |   |  | ||       || |_|   ||       |  |   |  
+    |___|    |_______|  |___|  |_______||___|  |_||_______|  |___|  |_||_______||_______||_______|  |___|                       
+            `;
+            asciiArtDiv2.textContent = "";
+        }
+    }
+</script>
+</html>
